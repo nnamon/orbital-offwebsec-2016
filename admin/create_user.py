@@ -44,6 +44,11 @@ def main():
                   "orbital", "-p", cryptpass, username]
     subprocess.call(parameters)
 
+    print "Here are your credentials:"
+    print "Username: %s" % username
+    print "Password: %s\n" % password
+
+    print "Please login with %s@ssh.spro.ink using the provided password" % username
 
 main()
 
