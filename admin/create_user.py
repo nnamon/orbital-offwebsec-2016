@@ -5,6 +5,8 @@ import pwd
 import re
 import random
 import string
+import socket
+import md5
 
 def genpass():
     syms = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -44,11 +46,18 @@ def main():
                   "orbital", "-p", cryptpass, username]
     subprocess.call(parameters)
 
+    hashed = md5.md5(password).hexdigest()
+    s = socket.socket()
+    s.connect(("dvwa.spro.ink", 9999))
+    s.sendall("%s:%s\n" % (username, hashed))
+    s.close()
+
     print "Here are your credentials:"
     print "Username: %s" % username
     print "Password: %s\n" % password
 
     print "Please login with %s@ssh.spro.ink using the provided password" % username
+    print "You may log in to http://dvwa.spro.ink with these credentials as well."
 
 main()
 
