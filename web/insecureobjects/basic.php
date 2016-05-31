@@ -25,7 +25,7 @@ else {
         echo("Username: " . $_COOKIE["user"]);
     }
     if ($_COOKIE["admin"] == "1") {
-        echo("You are admin.");
+        echo("<br />You are admin.");
     }
 }
 
