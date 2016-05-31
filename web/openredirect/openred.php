@@ -1,9 +1,10 @@
 <?php
 
 $redirect = $_GET['url'];
-header("Location: " . $redirect);
-
-<a href="openred.phps">Source</a>
-
+if (isset($redirect)) {
+            header("Location: " . $redirect);
+}
+else {
+            show_source(__FILE__);
+}
 ?>
-
