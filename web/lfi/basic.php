@@ -14,7 +14,8 @@
 $p = $_GET['page'];
 $s = $_GET['src'];
 if (isset($p)) {
-    include("pages/" . $p . ".php");
+    chdir("pages");
+    include($p . ".php");
     echo "Bio info: " . $bio;
 }
 else if (isset($s)) {
