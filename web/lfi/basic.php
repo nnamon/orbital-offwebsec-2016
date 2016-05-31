@@ -12,7 +12,7 @@
 <?php
 $p = $_GET['page'];
 $s = $_GET['src'];
-if (isset($f)) {
+if (isset($p)) {
     include("pages/" . $p . ".php");
     echo "Bio info: " . $bio;
 }
