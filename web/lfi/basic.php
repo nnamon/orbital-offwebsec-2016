@@ -5,6 +5,7 @@
 <a href="?page=main">Main</a>
 <a href="?page=zerocool">Zero Cool</a>
 <a href="?page=acidburn">Acid Burn</a>
+<!-- we had a page for The Plague but he's gone now -->
 
 <br />
 <a href="?src=1">Show source</a>
