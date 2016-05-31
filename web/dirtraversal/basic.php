@@ -15,9 +15,9 @@ $f = $_GET['file'];
 $s = $_GET['src'];
 if (isset($f)) {
     echo "Number Ascii Art++";
-    echo "<pre>"
+    echo "<pre>";
     echo file_get_contents("nums/" . $f);
-    echo "</pre>"
+    echo "</pre>";
 }
 else if (isset($s)) {
     show_source(__FILE__);
