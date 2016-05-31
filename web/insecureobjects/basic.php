@@ -14,7 +14,7 @@
 <?php
 
 if ($_POST['name'] && $_POST['pass']) {
-    if ($_POST['name'] === 'orbitaluser' && $_POST['pass'] === 'password') {
+    if ($_POST['name'] == 'orbitaluser' && $_POST['pass'] == 'password') {
         setcookie("user", $_POST['name']);
         setcookie("admin", '0');
         echo "Success!";
